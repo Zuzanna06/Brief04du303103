@@ -1,9 +1,9 @@
 
     
     
-    // au chargement de la page en appelle une fonction anonime
+        // au chargement de la page en appelle une fonction anonime
     
-    document.body.onload=function(){
+        document.body.onload=function(){
 
         //on reincialise les variable, 8 immages et la position 0(pour apres la decale a gauche au a droite pour faire effet caroussel)
         nombre=8;
@@ -90,7 +90,7 @@ const results = document.querySelector('.results');
 let images =  document.querySelectorAll('#carrousel img');
 console.log(images);
 
-//recuperation des boutons
+//recuperation des boutons funtion flechee
 let boutons = document.querySelectorAll('#carrousel button');
 console.log(boutons);
 boutons.forEach((el, index)=> {

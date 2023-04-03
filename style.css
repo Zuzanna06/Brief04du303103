@@ -258,17 +258,25 @@ dialog img{
  border: solid 20px #d9d9d9;
 }
 
-@media screen and (max-width: 500px){
-    #carrousel #container{
+@media screen and (max-width: 600px){
+    section:nth-child(3){
       display: block;
     }
     dialog{
+        width: 70%;
         min-height: 60vh;
         display: block;
     }
     .card{
         display: block;
       }
+    .cardPlaces{
+        margin: 10px auto;
+      }
+      #carrousel{
+        margin: auto;
+      }
+     
     dialog img{
       display: block;
       width: 100%;

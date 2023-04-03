@@ -6,7 +6,8 @@
     
         document.body.onload=function(){
 
-        // je réinitialise les variables, 8 images et la position 0(pour apres on la decale a gauche au a droite pour faire effet caroussel)
+        // je réinitialise les variables, 8 images et la position 0
+        //(pour apres on la decale a gauche au a droite pour faire effet caroussel)
         nombre=8;
         p=0;
     
@@ -15,8 +16,9 @@
         container=document.getElementById("container");
         g=document.getElementById("g");
         d=document.getElementById("d");
-        // je modifie largeur du contenneur (on applique une taille et on multiplie par nombre de immages px=unites)
-        container.style.widith=(195*nombre)+"px";
+        // je modifie largeur du contenneur (on applique une taille 
+        //et on multiplie par nombre de immages px=unites)
+        container.style.width=(195*nombre)+"px"; //mon erreur 
     
         // je prossede au traitement itération, la transformation ineration d'immages
         // image se trouve dans le div que je crée dynamiquement
@@ -35,9 +37,12 @@
     }
     // je programme les button, je click sur la gauche on se deplace vers la gauche
     g.onclick=function(){
-        if(p>-nombre+1) //une condition pour que ca se limit (si p est superieur a -nbr+1 (superieur a :-7, j'arret animer la caroussel))
+        if(p>-nombre+1) 
+        //une condition pour que ca se limit 
+        //(si p est superieur a -nbr+1 (superieur a :-7, j'arret animer la caroussel))
         p--; //position negatif je decrement 
-        container.style.transform="translate("+p*195+"px)"; // la valeur c'est p *la largeur d'image
+        container.style.transform="translate("+p*195+"px)"; 
+        // la valeur c'est p *la largeur d'image
         // j'applique une transition avec le css
         container.style.transition="all 0.5s ease";
         afficherMasquer(); // une funtion afficher et masquer les button
@@ -103,7 +108,7 @@ function affichePopup(index) {
     dialog.appendChild(image);
     dialog.appendChild(text);
     
-    dialog.showModal();
+    dialog.showModal(); //affiche toit a ecrant
 
     dialog.addEventListener('click', e => dialog.close())
 
